@@ -368,3 +368,33 @@ function generateQuestionFields(numberOfQuestions) {
     }
 
 }
+
+    // ===============================
+// OPEN QUESTION BUILDER
+// ===============================
+
+if (createExamForm) {
+
+    createExamForm.addEventListener("submit", function() {
+
+        const numberOfQuestions =
+            Number(
+                document.getElementById("numberOfQuestions").value
+            );
+
+
+        if (questionBuilderSection) {
+
+            questionBuilderSection.style.display = "block";
+
+            generateQuestionFields(numberOfQuestions);
+
+            questionBuilderSection.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+}
