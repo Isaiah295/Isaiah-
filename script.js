@@ -75,4 +75,21 @@ if (adminDashboard) {
 
 }
 
+// ===============================
+// ADMIN LOGOUT
+// ===============================
 
+const adminLogout =
+    document.getElementById("adminLogout");
+
+if (adminLogout) {
+
+    adminLogout.addEventListener("click", function() {
+
+        localStorage.removeItem("adminLoggedIn");
+
+        window.location.href = "admin-login.html";
+
+    });
+
+}
