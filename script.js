@@ -93,3 +93,74 @@ if (adminLogout) {
     });
 
 }
+
+    // ===============================
+// CREATE EXAMINATION
+// ===============================
+
+const createExamForm =
+    document.getElementById("createExamForm");
+
+if (createExamForm) {
+
+    createExamForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const examName =
+            document.getElementById("examName").value.trim();
+
+        const subject =
+            document.getElementById("examSubject").value.trim();
+
+        const code =
+            document.getElementById("examCode").value.trim();
+
+        const duration =
+            document.getElementById("examDuration").value;
+
+        const numberOfQuestions =
+            document.getElementById("numberOfQuestions").value;
+
+
+        const newExam = {
+
+            id: Date.now(),
+
+            name: examName,
+
+            subject: subject,
+
+            code: code,
+
+            duration: Number(duration),
+
+            numberOfQuestions:
+                Number(numberOfQuestions),
+
+            questions: []
+
+        };
+
+
+        let exams =
+            JSON.parse(localStorage.getItem("exams")) || [];
+
+
+        exams.push(newExam);
+
+
+        localStorage.setItem(
+            "exams",
+            JSON.stringify(exams)
+        );
+
+
+        alert("Examination created successfully!");
+
+
+        createExamForm.reset();
+
+    });
+
+}
