@@ -54,4 +54,25 @@ if (adminLoginForm) {
 
     });
 
+
+    // ===============================
+// ADMIN DASHBOARD PROTECTION
+// ===============================
+
+const adminDashboard =
+    document.getElementById("createExamForm");
+
+if (adminDashboard) {
+
+    const adminLoggedIn =
+        localStorage.getItem("adminLoggedIn");
+
+    if (adminLoggedIn !== "true") {
+
+        window.location.href = "admin-login.html";
+
+    }
+
 }
+
+
