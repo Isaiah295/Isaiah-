@@ -30,3 +30,78 @@
     </header>
 
     <main class="exam-container">
+                <div class="exam-top">
+
+            <div>
+                <span>Student</span>
+                <strong id="studentDisplay">Student</strong>
+            </div>
+
+            <div>
+                <span>Question</span>
+                <strong>
+                    <span id="currentQuestion">1</span>
+                    /
+                    <span id="totalQuestions">5</span>
+                </strong>
+            </div>
+
+        </div>
+
+
+        <section class="question-card">
+
+            <div class="question-number">
+                Question 1
+            </div>
+
+            <h1 id="questionText">
+                What is the value of 2 + 2?
+            </h1>
+
+
+            <div class="options">
+
+                <label class="option">
+                    <input type="radio" name="answer" value="A">
+                    <span class="option-letter">A</span>
+                    <span>3</span>
+                </label>
+
+
+                <label class="option">
+                    <input type="radio" name="answer" value="B">
+                    <span class="option-letter">B</span>
+                    <span>4</span>
+                </label>
+
+
+                <label class="option">
+                    <input type="radio" name="answer" value="C">
+                    <span class="option-letter">C</span>
+                    <span>5</span>
+                </label>
+
+
+                <label class="option">
+                    <input type="radio" name="answer" value="D">
+                    <span class="option-letter">D</span>
+                    <span>6</span>
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <div class="exam-navigation">
+
+            <button id="previousBtn" class="nav-btn secondary">
+                ← Previous
+            </button>
+
+            <button id="nextBtn" class="nav-btn">
+                Next →
+            </button>
+
+        </div>
