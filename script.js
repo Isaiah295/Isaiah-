@@ -164,3 +164,73 @@ if (createExamForm) {
     });
 
 }
+
+    // ===============================
+// DISPLAY EXAMS
+// ===============================
+
+const examList =
+    document.getElementById("examList");
+
+if (examList) {
+
+    const exams =
+        JSON.parse(localStorage.getItem("exams")) || [];
+
+
+    if (exams.length > 0) {
+
+        examList.innerHTML = "";
+
+
+        exams.forEach(function(exam) {
+
+            const examCard =
+                document.createElement("div");
+
+            examCard.className = "exam-card";
+
+
+            examCard.innerHTML = `
+
+                <div>
+
+                    <h3>${exam.name}</h3>
+
+                    <p>${exam.subject}</p>
+
+                    <span>
+                        Code: ${exam.code}
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        ${exam.numberOfQuestions}
+                    </strong>
+
+                    <span> Questions </span>
+
+                    <br>
+
+                    <strong>
+                        ${exam.duration}
+                    </strong>
+
+                    <span> Minutes </span>
+
+                </div>
+
+            `;
+
+
+            examList.appendChild(examCard);
+
+        });
+
+    }
+
+}
