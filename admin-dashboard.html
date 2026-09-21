@@ -91,3 +91,122 @@
             </div>
 
         </section>
+                <section class="create-exam-section" id="createExamSection">
+
+            <div class="section-title">
+
+                <div>
+                    <span>EXAMINATION SETUP</span>
+
+                    <h2>Create New Examination</h2>
+
+                    <p>
+                        Enter the basic information for your examination.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="createExamForm" class="exam-form">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="examName">
+                            Examination Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examName"
+                            placeholder="e.g. MTH102 Mid-Semester Exam"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="examSubject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examSubject"
+                            placeholder="e.g. Mathematics"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="examCode">
+                            Exam Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examCode"
+                            placeholder="e.g. MTH1022026"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="examDuration">
+                            Duration (minutes)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="examDuration"
+                            min="1"
+                            placeholder="e.g. 60"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="numberOfQuestions">
+                        Number of Questions
+                    </label>
+
+                    <input
+                        type="number"
+                        id="numberOfQuestions"
+                        min="1"
+                        placeholder="e.g. 50"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Create Examination
+                </button>
+
+            </form>
+
+                </section>
