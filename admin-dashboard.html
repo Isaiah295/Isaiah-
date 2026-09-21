@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Admin Dashboard | ExamPro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+
+        <div class="exam-logo">
+            <span>EXAM</span>PRO
+        </div>
+
+        <div class="admin-profile">
+            <span>👤</span>
+            <strong>Administrator</strong>
+
+            <button id="adminLogout">
+                Logout
+            </button>
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-heading">
+
+            <div>
+                <span>ADMINISTRATION</span>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Manage your examinations, questions and student results.
+                </p>
+            </div>
+
+            <button
+                id="createExamBtn"
+                class="primary-btn"
+            >
+                + Create New Exam
+            </button>
+
+        </div>
+
+
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+                <span>📝</span>
+                <div>
+                    <strong id="totalExams">0</strong>
+                    <p>Total Exams</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span>❓</span>
+                <div>
+                    <strong id="totalQuestions">0</strong>
+                    <p>Total Questions</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span>👨‍🎓</span>
+                <div>
+                    <strong id="totalStudents">0</strong>
+                    <p>Students</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span>📊</span>
+                <div>
+                    <strong id="totalResults">0</strong>
+                    <p>Results</p>
+                </div>
+            </div>
+
+        </section>
