@@ -606,4 +606,272 @@ footer p {
         padding: 30px 22px;
     }
 
+/* EXAMINATION PAGE */
+
+.exam-header {
+    min-height: 75px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    border-bottom: 1px solid #e5eaf2;
 }
+
+.exam-logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.exam-logo span {
+    color: #2563eb;
+}
+
+.exam-title {
+    text-align: center;
+}
+
+.exam-title h2 {
+    font-size: 18px;
+}
+
+.exam-title p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.timer-box {
+    min-width: 130px;
+    padding: 8px 15px;
+    text-align: center;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+.timer-box span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.timer-box strong {
+    color: #2563eb;
+    font-size: 20px;
+}
+
+
+.exam-container {
+    width: min(100%, 1000px);
+    margin: auto;
+    padding: 40px 20px 70px;
+}
+
+.exam-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.exam-top div {
+    display: flex;
+    flex-direction: column;
+}
+
+.exam-top span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.exam-top strong {
+    font-size: 15px;
+}
+
+
+.question-card {
+    padding: 35px;
+    background: white;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.question-number {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.question-card h1 {
+    margin: 12px 0 30px;
+    font-size: 25px;
+}
+
+
+.options {
+    display: grid;
+    gap: 14px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid #dfe4ec;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.option:hover {
+    border-color: #2563eb;
+    background: #f8fbff;
+}
+
+.option input {
+    display: none;
+}
+
+.option-letter {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.option:has(input:checked) {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.option:has(input:checked) .option-letter {
+    background: #2563eb;
+    color: white;
+}
+
+
+.exam-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-btn.secondary {
+    background: white;
+    color: #172033;
+    border: 1px solid #d9dee8;
+}
+
+.nav-btn:hover {
+    background: #1d4ed8;
+    color: white;
+}
+
+
+.question-navigation {
+    margin-top: 35px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e5eaf2;
+    border-radius: 14px;
+}
+
+.question-navigation h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.question-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question-number {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d9dee8;
+    border-radius: 8px;
+    background: white;
+    color: #172033;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.question-number.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+
+.submit-area {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.submit-exam {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 9px;
+    background: #dc2626;
+    color: white;
+    font-weight: 700;
+}
+
+.submit-exam:hover {
+    background: #b91c1c;
+}
+
+
+@media (max-width: 600px) {
+
+    .exam-header {
+        padding: 12px 5%;
+    }
+
+    .exam-title {
+        display: none;
+    }
+
+    .exam-logo {
+        font-size: 19px;
+    }
+
+    .timer-box {
+        min-width: 105px;
+    }
+
+    .question-card {
+        padding: 22px;
+    }
+
+    .question-card h1 {
+        font-size: 21px;
+    }
+
+    .exam-navigation {
+        gap: 10px;
+    }
+
+    .nav-btn {
+        padding: 11px 15px;
+    }
+
+}
+
