@@ -234,3 +234,137 @@ if (examList) {
     }
 
 }
+
+    // ===============================
+// QUESTION BUILDER
+// ===============================
+
+const questionBuilderSection =
+    document.getElementById("questionBuilderSection");
+
+const questionFields =
+    document.getElementById("questionFields");
+
+
+function generateQuestionFields(numberOfQuestions) {
+
+    questionFields.innerHTML = "";
+
+
+    for (let i = 1; i <= numberOfQuestions; i++) {
+
+        const questionBox =
+            document.createElement("div");
+
+        questionBox.className = "question-builder-card";
+
+
+        questionBox.innerHTML = `
+
+            <h3>Question ${i}</h3>
+
+            <div class="input-group">
+
+                <label>
+                    Question
+                </label>
+
+                <input
+                    type="text"
+                    class="question-input"
+                    placeholder="Enter question ${i}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="input-group">
+
+                    <label>Option A</label>
+
+                    <input
+                        type="text"
+                        class="option-a"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Option B</label>
+
+                    <input
+                        type="text"
+                        class="option-b"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="input-group">
+
+                    <label>Option C</label>
+
+                    <input
+                        type="text"
+                        class="option-c"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Option D</label>
+
+                    <input
+                        type="text"
+                        class="option-d"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Correct Answer
+                </label>
+
+                <select class="correct-answer" required>
+
+                    <option value="">
+                        Select correct answer
+                    </option>
+
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+
+                </select>
+
+            </div>
+
+        `;
+
+
+        questionFields.appendChild(questionBox);
+
+    }
+
+}
