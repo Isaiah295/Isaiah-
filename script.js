@@ -20,3 +20,38 @@ if (studentLoginForm) {
         window.location.href = "exam.html";
     });
 }
+
+// ===============================
+// ADMIN LOGIN
+// ===============================
+
+const adminLoginForm = document.getElementById("adminLoginForm");
+
+if (adminLoginForm) {
+
+    adminLoginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const username =
+            document.getElementById("adminUsername").value.trim();
+
+        const password =
+            document.getElementById("adminPassword").value.trim();
+
+
+        if (username === "admin" && password === "12345") {
+
+            localStorage.setItem("adminLoggedIn", "true");
+
+            window.location.href = "admin-dashboard.html";
+
+        } else {
+
+            alert("Invalid username or password.");
+
+        }
+
+    });
+
+}
